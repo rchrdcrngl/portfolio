@@ -17,7 +17,7 @@ export default function ProjectPage({ projectData }) {
                 {
                     projectData.images.map((i)=>
                     <div>
-                        <Image src={i.url}/>
+                        <Image src={i.url} alt={i.description}/>
                         {i.description}
                     </div>)
                 }

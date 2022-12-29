@@ -10,9 +10,16 @@ export default function ProjectPage({ projectData }) {
                 <title>{projectData.title} - RCHRD CRNGL</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <main className='bg-blue-500 font-bold'>
+            <main className='bg-slate-50'>
                 {
                     JSON.stringify(projectData)
+                }
+                {
+                    projectData.images.map((i)=>
+                    <div>
+                        <Image src={i.url}/>
+                        {i.description}
+                    </div>)
                 }
             </main>
         </>

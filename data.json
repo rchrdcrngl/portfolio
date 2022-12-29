@@ -1,14 +1,15 @@
 [
     {
-        "title": "RemCards",
-        "slug": "remcards",
+        "title": "RemCards Flutter",
+        "slug": "remcards-flutter",
         "description": "This is a reminders app for students.",
         "type": "Mobile App",
-        "technology": ["Java"],
-        "source_code": "https://www.google.com",
-        "latest_output": "https://www.google.com",
+        "technology": ["Flutter", "Dart"],
+        "source_code": "https://github.com/rchrdcrngl/RemCards-Flutter",
+        "latest_output": "https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/remcards/apks/RemCards-FL220427.apk",
         "images": [
-            {"url":"","description":"This is an image"}
+            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/RemCards%20Home.jpg?raw=true","description":"Home Page"},
+            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Add%20Card.jpg?raw=true","description":"Add RemCard Page"}
         ]
     }
 ]

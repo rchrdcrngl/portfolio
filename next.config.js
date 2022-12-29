@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     loader: "akamai",
     path: "/",
+    domains: ["https://github.com/"]
   },
   basePath: "/portfolio",
   assetPrefix: "/portfolio"

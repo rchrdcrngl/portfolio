@@ -7,7 +7,7 @@ export default function ProjectPage({ projectData }) {
     return (
         <>
             <Head>
-                <title>{projectData[0].title} - RCHRD CRNGL</title>
+                <title>{projectData.title} - RCHRD CRNGL</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <main className='bg-blue-500 font-bold'>
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
     const raw = await fs.readFile(path.join(process.cwd(), "./data.json"), { encoding: "utf-8" });
     const parsed = await JSON.parse(raw)
     const data = parsed.filter((p)=>p.slug===params.slug)
-    return { props: { projectData: data } };
+    return { props: { projectData: data[0] } };
 }
 
 /** @type {import('next').GetStaticPaths} */

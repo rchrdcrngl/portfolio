@@ -11,7 +11,7 @@ export default function ProjectPage({ projectData }) {
     return (
         <>
             <Head>
-                <title>{projectData.title} - RCHRD CRNGL</title>
+                <title>{projectData[0].title} - RCHRD CRNGL</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

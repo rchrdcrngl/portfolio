@@ -10,7 +10,7 @@ export default function ProjectPage({ projectData }) {
                 <title>{projectData[0].title} - RCHRD CRNGL</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <main className='bg-blue-500'>
+            <main className='bg-blue-500 font-bold'>
                 {
                     JSON.stringify(projectData)
                 }

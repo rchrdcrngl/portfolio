@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import fs from "fs/promises";
 import path from "path";
+import NavBar from '../components/NavBar';
 
 export default function ProjectPage({ projectData }) {
     return (
@@ -10,6 +11,7 @@ export default function ProjectPage({ projectData }) {
                 <title>{projectData.title} - RCHRD CRNGL</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
+            <NavBar/>
             <main className='bg-slate-50'>
                 {
                     JSON.stringify(projectData)

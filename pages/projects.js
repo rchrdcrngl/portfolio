@@ -14,17 +14,16 @@ export default function ProjectPage({ projects }) {
             <NavBar/>
             <main className='bg-slate-50'>
                 {
-                    JSON.stringify(projectData)
+                    JSON.stringify(projects)
                 }
             </main>
         </>
     )
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
     const raw = await fs.readFile(path.join(process.cwd(), "./data.json"), { encoding: "utf-8" });
     const parsed = await JSON.parse(raw)
     const partialData = parsed.map(({title, slug, images})=>({title, slug, images}))
-    console.log(partialData)
     return { props: { projects: partialData } };
 }

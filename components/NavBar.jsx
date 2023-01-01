@@ -15,7 +15,7 @@ export default function NavBar() {
                     <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-slate-200 hover:text-white mr-4">
                         Home
                     </a>
-                    <a href="/projects" class="block mt-4 lg:inline-block lg:mt-0 text-slate-200 hover:text-white mr-4">
+                    <a href="projects" class="block mt-4 lg:inline-block lg:mt-0 text-slate-200 hover:text-white mr-4">
                         Projects
                     </a>
                 </div>

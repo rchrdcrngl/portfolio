@@ -3,8 +3,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import NavBar from '../components/NavBar'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home({ projects }) {
   return (
     <>

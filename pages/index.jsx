@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import NavBar from '../components/NavBar'
 import fs from "fs/promises"
@@ -64,10 +63,8 @@ export default function Home({ profile, projects }) {
                   <div className="group basis-1/3 flex-1 relative transition ease-in-out delay-15 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div className='absolute transition ease-in-out duration-300 w-full h-96 bg-gradient-to-b from-transparent to-teal-700 hidden group-hover:block rounded-lg'></div>
                     <div className='absolute transition ease-in-out duration-300 bottom-0 left-0 pl-5 pb-5 pr-2 font-bold text-xl text-slate-200 hidden group-hover:block'>{p.title}</div>
-                    <Image
+                    <img
                       className="rounded-lg object-cover object-left-top w-full h-96"
-                      width={150}
-                      height={150}
                       title={p.name}
                       src={p.images[0].url}
                     />

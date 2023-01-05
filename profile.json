@@ -1,0 +1,14 @@
+{
+    "name":"Richard Maru Caringal",
+    "subheader":"Student and Full Stack Developer",
+    "description":"A junior Computer Science student at the University of Santo Tomas. Let's see more of what I do!",
+    "profile_img":"",
+    "skills":["Java","Python","Dart","Flutter","HTML","CSS","JavaScript","ExpressJS","NodeJS","TypeScript","NextJS","ReactJS"],
+    "projects_description":"The projects below are personal side projects that I have made as a student. Most of it are apps that I use on a daily basis. Here are some projects I have made for the past three years.",
+    "contacts":[
+        {"type":"github","url":"https://github.com/rchrdcrngl"},
+        {"type":"linkedin","url":"https://www.linkedin.com/in/richard-maru-caringal"},
+        {"type":"email","url":"mailto: richard.caringal23@gmail.com"},
+        {"type":"facebook","url":"https://facebook.com/richardmaru"}
+    ]
+}

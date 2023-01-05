@@ -58,13 +58,10 @@
         "source_code": "https://github.com/rchrdcrngl/weightracker",
         "latest_output": "https://github.com/rchrdcrngl/weightracker/blob/main/apks/WeighTracker_v1.0.apk",
         "images": [
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/RemCards%20Home.jpg?raw=true","description":"Home Page"},
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Add%20Card.jpg?raw=true","description":"Add RemCard Page"},
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Edit%20Card.jpg?raw=true","description":"Edit RemCard Page"},
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Schedule.jpg?raw=true","description":"Schedules Page"},
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Add%20Schedule.jpg?raw=true","description":"Add Period Page"},
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Edit%20Schedule.jpg?raw=true","description":"Edit Period Page"},
-            {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsApp-Flutter/screenshots/Settings.jpg?raw=true","description":"Settings Page"}
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Dashboard.jpg?raw=true","description":"Dashboard"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Weight%20History.jpg?raw=true","description":"Weight History"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Add%20Weight.jpg?raw=true","description":"Add Weight"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Settings.jpg?raw=true","description":"Settings"}
         ]
     }
 ]

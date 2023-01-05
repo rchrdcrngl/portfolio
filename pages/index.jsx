@@ -65,9 +65,9 @@ export default function Home({ profile, projects }) {
                     <div className='absolute transition ease-in-out duration-300 bottom-0 left-0 pl-5 pb-5 pr-2 font-bold text-xl text-slate-200 hidden group-hover:block'>{p.title}</div>
                     <img
                       className="rounded-lg object-cover object-left-top w-full h-96"
-                      title={p.name}
+                      alt={p.name}
                       src={p.images[0].url}
-                    />
+                    ></img>
                   </div>
                 </Link>
               ))

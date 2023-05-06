@@ -17,7 +17,7 @@ export default function NavBar() {
                     <a href="/portfolio" className="block mt-4 lg:inline-block lg:mt-0 text-slate-200 hover:text-white mr-4">
                         Home
                     </a>
-                    <a href="/#projects" className="block mt-4 lg:inline-block lg:mt-0 text-slate-200 hover:text-white mr-4">
+                    <a href="/portfolio/#projects" className="block mt-4 lg:inline-block lg:mt-0 text-slate-200 hover:text-white mr-4">
                         Projects
                     </a>
                 </div>

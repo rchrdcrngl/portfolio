@@ -10,7 +10,7 @@ export default function Home({ profile, projects }) {
   return (
     <>
       <Head>
-        <title>RCHRD CRNGL</title>
+        <title>Richard Maru Caringal</title>
       </Head>
       <NavBar />
       <main className="bg-white  dark:bg-gray-900">

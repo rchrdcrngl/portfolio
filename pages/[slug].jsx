@@ -10,7 +10,7 @@ export default function ProjectPage({ projectData }) {
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [isWideImage, setIsWideImage] = useState(false);
 
-    useEffect(() => {
+    window.onload(()=>{
         const images = document.querySelectorAll("img");
 
         images.forEach((img) => {
@@ -18,7 +18,7 @@ export default function ProjectPage({ projectData }) {
             console.log(aspectRatio)
             setIsWideImage((aspectRatio >= 1.4) || isWideImage);
         });
-    }, []);
+    })
 
     return (
         <>

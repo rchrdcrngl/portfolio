@@ -43,7 +43,7 @@ export default function ProjectPage({ projectData }) {
                 </section>
                 <section className="min-h-screen px-10 py-10 md:px-20 lg:px-40">
                     <h3 className="text-3xl py-1 dark:text-white mb-3">Project Preview</h3>
-                    <div className={`grid grid-cols-1 content-center justify-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 ${isWideImage ? 'lg:grid-cols-2' : 'lg:grid-cols-4'}`}>
+                    <div className={`grid grid-cols-1 content-center justify-stretch gap-4 sm:grid-cols-2 ${isWideImage ? 'lg:grid-cols-2' : 'lg:grid-cols-3'} ${isWideImage ? 'lg:grid-cols-2' : 'lg:grid-cols-4'}`}>
                         {
                             projectData.images.map((i) =>
                                 <div className='flex flex-col items-center mb-3'>

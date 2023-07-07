@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import randomColor from "randomcolor"
 import fs from "fs/promises";
@@ -12,18 +11,13 @@ export default function ProjectPage({ projectData }) {
     const [isWideImage, setIsWideImage] = useState(false);
 
     useEffect(() => {
-        const img = new Image();
-        projectData.images.forEach((i)=>{
-            img.src = i.url;
-            img.onload = () => {
-                const width = img.width;
-                const height = img.height;
-                const aspectRatio = width / height;
-                const isWide = aspectRatio >= 1.4;
-                setIsWideImage(isWide);
-              };
+        const images = document.querySelectorAll("img");
+
+        images.forEach((img) => {
+            const aspectRatio = img.naturalWidth / img.naturalHeight;
+            setIsWideImage(aspectRatio >= 1.4)
         });
-      }, []);
+    }, []);
 
     return (
         <>

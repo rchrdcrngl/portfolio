@@ -32,12 +32,12 @@ export default function ProjectPage({ projectData }) {
                         </div>
                     </div>
                 </section>
-                <section className="px-10 py-10 md:px-20 lg:px-40 min-h-screen">
+                <section className="min-h-screen px-10 py-10 md:px-20 lg:px-40">
                     <h3 className="text-3xl py-1 dark:text-white mb-3">Project Preview</h3>
-                    <div className="grid grid-cols-1 justify-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+                    <div className="grid grid-cols-1 content-center justify-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                         {
                             projectData.images.map((i) =>
-                                <div className='md:basis-1/2 mb-3'>
+                                <div className='flex flex-col items-center mb-3'>
                                     <img src={i.url} alt={i.description} className='rounded-md'></img>
                                     <div className='text-md md:text-lg'>{i.description}</div>
                                 </div>)

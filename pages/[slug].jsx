@@ -20,10 +20,6 @@ export default function ProjectPage({ projectData }) {
         });
     }, []);
 
-    window.onload(()=>{
-        
-    })
-
     return (
         <>
             <Head>

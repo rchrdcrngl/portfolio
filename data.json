@@ -72,11 +72,11 @@
         "technology": ["HTML", "CSS", "Java EE", "JSP", "Servlet", "JSF", "PrimeFaces", "Maven", "PostgreSQL", "Brevo", "UploadCare"],
         "latest_output": "https://mbos.store/",
         "images": [
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/home.jpg?raw=true","description":"Home Page"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/product_page.jpg?raw=true","description":"Product Page"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/checkout_page.jpg?raw=true","description":"Checkout Page"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/orderm_page.jpg?raw=true","description":"Order Management Page"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/productm_page.jpg?raw=true","description":"Product Management Page"}
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/main/images/mbos/home.jpg?raw=true","description":"Home Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/main/images/mbos/product_page.jpg?raw=true","description":"Product Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/main/images/mbos/checkout_page.jpg?raw=true","description":"Checkout Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/main/images/mbos/orderm_page.jpg?raw=true","description":"Order Management Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/main/images/mbos/productm_page.jpg?raw=true","description":"Product Management Page"}
         ]
     }
 ]

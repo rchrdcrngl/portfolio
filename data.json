@@ -63,5 +63,20 @@
             {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Add%20Weight.jpg?raw=true","description":"Add Weight"},
             {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Settings.jpg?raw=true","description":"Settings"}
         ]
+    },
+    {
+        "title": "Mommy Badets Online Store",
+        "slug": "mbos",
+        "description": "An ecommerce web app built with Java. The app is created for a client in compliance with my Software Engineering course. The app has an admin dashboard where the users can manage orders and products while customers can order directly from the site.",
+        "type": "web",
+        "technology": ["HTML", "CSS", "Java EE", "JSP", "Servlet", "JSF", "PrimeFaces", "Maven", "PostgreSQL", "Brevo", "UploadCare"],
+        "latest_output": "https://mbos.store/",
+        "images": [
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/home.jpg?raw=true","description":"Home Page"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/product_page.jpg?raw=true","description":"Product Page"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/checkout_page.jpg?raw=true","description":"Checkout Page"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/orderm_page.jpg?raw=true","description":"Order Management Page"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/images/mbos/productm_page.jpg?raw=true","description":"Product Management Page"}
+        ]
     }
 ]

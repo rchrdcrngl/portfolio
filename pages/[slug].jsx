@@ -34,7 +34,7 @@ export default function ProjectPage({ projectData }) {
                 </section>
                 <section className="px-10 py-10 md:px-20 lg:px-40 min-h-screen">
                     <h3 className="text-3xl py-1 dark:text-white mb-3">Project Preview</h3>
-                    <div className='flex flex-col md:grid md:grid-cols-2 md:gap-5 justify-evenly items-center'>
+                    <div className="grid grid-cols-1 justify-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
                         {
                             projectData.images.map((i) =>
                                 <div className='md:basis-1/2 mb-3'>

@@ -15,7 +15,7 @@ export default function ProjectPage({ projectData }) {
 
         images.forEach((img) => {
             const aspectRatio = img.naturalWidth / img.naturalHeight;
-            setIsWideImage(aspectRatio >= 1.4)
+            setIsWideImage((aspectRatio >= 1.4) || isWideImage);
         });
     }, []);
 

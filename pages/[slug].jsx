@@ -5,10 +5,25 @@ import randomColor from "randomcolor"
 import fs from "fs/promises";
 import path from "path";
 import NavBar from '../components/NavBar';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ProjectPage({ projectData }) {
     const [selectedIndex, setSelectedIndex] = useState(0)
+    const [isWideImage, setIsWideImage] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        projectData.images.forEach((i)=>{
+            img.src = i.url;
+            img.onload = () => {
+                const width = img.width;
+                const height = img.height;
+                const aspectRatio = width / height;
+                const isWide = aspectRatio >= 1.4;
+                setIsWideImage(isWide);
+              };
+        });
+      }, []);
 
     return (
         <>
@@ -34,7 +49,7 @@ export default function ProjectPage({ projectData }) {
                 </section>
                 <section className="min-h-screen px-10 py-10 md:px-20 lg:px-40">
                     <h3 className="text-3xl py-1 dark:text-white mb-3">Project Preview</h3>
-                    <div className="grid grid-cols-1 content-center justify-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div className={`grid grid-cols-1 content-center justify-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 ${isWideImage ? 'lg:grid-cols-2' : 'lg:grid-cols-4'}`}>
                         {
                             projectData.images.map((i) =>
                                 <div className='flex flex-col items-center mb-3'>
@@ -59,19 +74,6 @@ export default function ProjectPage({ projectData }) {
                     </div>
                 </section>
             </main>
-            <style>
-                @media (min-width: 1024px) {
-                    .grid-cols-4 > div:nth-child(3n+1):nth-last-child(-n+2) {
-                        grid-column: span 2;
-                    }
-                }
-
-                @media (max-width: 1023px) {
-                    .grid-cols-4 > div:nth-child(2n+1) {
-                        grid-column: span 2;
-                    }
-                }
-            </style>
         </>
     )
 }

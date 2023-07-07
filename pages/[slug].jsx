@@ -59,6 +59,19 @@ export default function ProjectPage({ projectData }) {
                     </div>
                 </section>
             </main>
+            <style>
+                @media (min-width: 1024px) {
+                    .grid-cols-4 > div:nth-child(3n+1):nth-last-child(-n+2) {
+                        grid-column: span 2;
+                    }
+                }
+
+                @media (max-width: 1023px) {
+                    .grid-cols-4 > div:nth-child(2n+1) {
+                        grid-column: span 2;
+                    }
+                }
+            </style>
         </>
     )
 }

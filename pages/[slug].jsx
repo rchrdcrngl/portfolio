@@ -5,19 +5,14 @@ import fs from "fs/promises";
 import path from "path";
 import NavBar from '../components/NavBar';
 import { useEffect, useState } from 'react'
+import Lightbox from '../components/Lightbox';
 
 export default function ProjectPage({ projectData }) {
-    const [selectedIndex, setSelectedIndex] = useState(0)
+    const [selectedIndex, setIndex] = useState(-1);
     const [isWideImage, setIsWideImage] = useState(false);
 
     useEffect(() => {
-        const images = document.querySelectorAll("img");
-        console.log(images)
-        images.forEach((img) => {
-            const aspectRatio = img.naturalWidth / img.naturalHeight;
-            console.log(aspectRatio)
-            setIsWideImage((aspectRatio >= 1.4) || isWideImage);
-        });
+        setIsWideImage(projectData.type == 'web');
     }, []);
 
     return (
@@ -27,6 +22,7 @@ export default function ProjectPage({ projectData }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <NavBar />
+            <Lightbox images={projectData.images.map(({ url }) => ({ image }))} selectedIndex={selectedIndex} />
             <main className="bg-white  dark:bg-gray-900 dark:text-white">
                 <section className="px-10 md:px-20 lg:px-40 min-h-full bg-gradient-to-r dark:from-cyan-900 dark:to-purple-900 from-cyan-200 to-purple-200">
                     <div className="text-center p-10 py-10">
@@ -46,9 +42,9 @@ export default function ProjectPage({ projectData }) {
                     <h3 className="text-3xl py-1 dark:text-white mb-3">Project Preview</h3>
                     <div className={`grid grid-cols-1 content-center justify-stretch gap-4 sm:grid-cols-2 ${isWideImage ? 'md:grid-cols-2' : 'md:grid-cols-3'} ${isWideImage ? 'lg:grid-cols-2' : 'lg:grid-cols-4'}`}>
                         {
-                            projectData.images.map((i) =>
+                            projectData.images.map((i, index) =>
                                 <div className='flex flex-col items-center mb-3'>
-                                    <img src={i.url} alt={i.description} className='rounded-md'></img>
+                                    <img src={i.url} alt={i.description} className='rounded-md' onClick={setIndex(index)}></img>
                                     <div className='text-md md:text-lg'>{i.description}</div>
                                 </div>)
                         }

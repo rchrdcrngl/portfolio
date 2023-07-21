@@ -22,7 +22,7 @@ export default function ProjectPage({ projectData }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <NavBar />
-            <Lightbox images={projectData.images.map(({ url }) => ({ url }))} selectedIndex={selectedIndex} />
+            <Lightbox images={projectData.images} selectedIndex={selectedIndex} />
             <main className="bg-white  dark:bg-gray-900 dark:text-white">
                 <section className="px-10 md:px-20 lg:px-40 min-h-full bg-gradient-to-r dark:from-cyan-900 dark:to-purple-900 from-cyan-200 to-purple-200">
                     <div className="text-center p-10 py-10">

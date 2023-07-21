@@ -24,17 +24,6 @@ const Lightbox = ({ images, selectedIndex }) => {
   return (
     showLightbox && (
       <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-75">
-        <div className="grid grid-cols-3 gap-4">
-          {images.map((img, index) => (
-            <div key={index} onClick={() => openLightbox(img.url)}>
-              <img
-                src={img.url}
-                alt={`Image ${index + 1}`}
-                className="cursor-pointer w-full h-auto"
-              />
-            </div>
-          ))}
-        </div>
         <div className="relative">
           <img
             src={selectedImage}

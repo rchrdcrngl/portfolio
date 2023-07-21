@@ -4,8 +4,8 @@ const Lightbox = ({ images, selectedIndex }) => {
   const [showLightbox, setShowLightbox] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const openLightbox = (image) => {
-    setSelectedImage(image);
+  const openLightbox = (url) => {
+    setSelectedImage(url);
     setShowLightbox(true);
   };
 
@@ -22,10 +22,10 @@ const Lightbox = ({ images, selectedIndex }) => {
 
   return (
     <div className="grid grid-cols-3 gap-4">
-      {images.map((image, index) => (
-        <div key={index} onClick={() => openLightbox(image)}>
+      {images.map((url, index) => (
+        <div key={index} onClick={() => openLightbox(url)}>
           <img
-            src={image}
+            src={url}
             alt={`Image ${index + 1}`}
             className="cursor-pointer w-full h-auto"
           />

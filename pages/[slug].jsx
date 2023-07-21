@@ -4,7 +4,7 @@ import randomColor from "randomcolor"
 import fs from "fs/promises";
 import path from "path";
 import NavBar from '../components/NavBar';
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import Lightbox from '../components/Lightbox';
 
 export default function ProjectPage({ projectData }) {

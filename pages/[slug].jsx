@@ -44,7 +44,7 @@ export default function ProjectPage({ projectData }) {
                         {
                             projectData.images.map((i, index) =>
                                 <div className='flex flex-col items-center mb-3'>
-                                    <img src={i.url} alt={i.description} className='rounded-md' onClick={setIndex(index)}></img>
+                                    <img src={i.url} alt={i.description} className='rounded-md' onClick={() => setIndex(index)}></img>
                                     <div className='text-md md:text-lg'>{i.description}</div>
                                 </div>)
                         }

@@ -16,7 +16,7 @@ const Lightbox = ({ images, selectedIndex }) => {
 
   useEffect(() => {
     console.log(selectedIndex);
-    if (selectedIndex && selectedIndex >= 0) {
+    if (selectedIndex!=undefined && selectedIndex >= 0) {
       openLightbox(images[selectedIndex].url);
     }
   }, [selectedIndex]);

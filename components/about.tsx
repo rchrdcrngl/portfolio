@@ -36,9 +36,6 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
     };
   }, []);
 
-  const x = useTransform(scrollYProgress, [0.15, 0.2], ["50%", "0%"]);
-  //const textRotation = useTransform(scrollYProgress, [0.35, 0.50], ["-180deg", "0deg"]);
-  const opacity = useTransform(scrollYProgress, [0.40, 0.50], ["0%", "100%"]);
   const translateY = useTransform(
     scrollYProgress, 
     isDesktop? [0.5, 0.75] : [0.75, 0.90], 
@@ -70,11 +67,12 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
           id="about"
         >
           <div className="flex flex-col md:flex-row md:justify-evenly w-screen h-max">
-            <motion.div className="relative w-full md:w-3/4 sticky px-10 md:px-5 h-full md:h-screen flex md:items-center justify-center" style={{ opacity, transformOrigin: "top left" }}>
+            <div className="relative w-full md:w-3/4 sticky px-10 md:px-5 h-full md:h-auto">
               <motion.div
                 className="text-xl leading-10 md:text-3xl font-clash px-4"
                 initial={{ opacity: 0, x: 200 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                /*style={{ y: scrollY, translateY: '-100vh'}}*/
               >
                 {aboutBody.split("%np%").map((p, i) => (
                   <p
@@ -85,12 +83,12 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
                   </p>
                 ))}
               </motion.div>
-            </motion.div>
+            </div>
             <motion.div className="relative h-screen md:h-screen w-full order-1 md:order-2 md:w-1/4 mt-10 md:mt-0">
               {profileImage && (
                 <motion.div
                 className="absolute h-max w-full flex justify-center px-[3rem]"
-                  style={{ opacity: cameraOpacity, translateX }}
+                  style={{ opacity: cameraOpacity, translateX, }}
                 >
                   <ProfileCamera
                     motionStyle={{

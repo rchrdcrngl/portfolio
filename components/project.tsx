@@ -4,10 +4,11 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ProjectData } from "@/lib/types";
+import Link from "next/link";
 
 export type ProjectProps = {
   project: ProjectData;
-}
+};
 
 export default function Project({ project }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,27 +17,48 @@ export default function Project({ project }: ProjectProps) {
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
   return (
     <motion.div
       ref={ref}
       style={{
-        scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-16 md:mb-10 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{project.title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+      <div className="w-full rounded-lg sm:pr-8 relative transition sm:group-even:pl-8">
+        <Image
+          src={project.images[0].url}
+          alt={project.images[0].description ?? "Project I worked on"}
+          quality={95}
+          width={0}
+          height={0}
+          sizes="100%"
+          className="relative block pl-6 md:pl-0 mb-1
+            group-odd:rounded-tl-lg md:group-even:rounded-tr-lg
+            w-full max-h-[20rem]
+            object-cover object-left-top
+            transition duration-300 ease-in-out
+            group-hover:rounded-lg 
+            "
+        />
+        <div className="relative px-6 md:px-0 md:pt-10 w-full flex flex-col h-full">
+          <Link
+            className="relative text-2xl md:text-5xl font-clash font-bold uppercase hover:underline"
+            href={project.slug}
+          >
+            {project.title}
+          </Link>
+          <p className="relative hidden md:block mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {project.description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <ul className="relative flex flex-wrap mt-2 md:mt-4 gap-2">
             {project.technology.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className={`border-2 px-3 py-1 text-[0.7rem] 
+                              uppercase tracking-wider rounded-full 
+                              ${index > 6 ? "hidden md:block" : ""}`}
                 key={index}
               >
                 {tag}
@@ -44,28 +66,7 @@ export default function Project({ project }: ProjectProps) {
             ))}
           </ul>
         </div>
-
-        <Image
-          src={project.images[0].url}
-          alt={project.images[0].description??'Project I worked on'}
-          quality={95}
-          width={0}
-          height={0}
-          sizes="100%"
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-          transition 
-          group-hover:scale-[1.04]
-          group-hover:-translate-x-3
-          group-hover:translate-y-3
-          group-hover:-rotate-2
-
-          group-even:group-hover:translate-x-3
-          group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2
-
-          group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
+      </div>
     </motion.div>
   );
 }

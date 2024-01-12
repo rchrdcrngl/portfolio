@@ -35,11 +35,11 @@ export default function Project({ project }: ProjectProps) {
           width={0}
           height={0}
           sizes="100%"
-          className="relative block pl-6 md:pl-0 mb-1
-            group-odd:rounded-tl-lg md:group-even:rounded-tr-lg
+          className="relative block ml-6 md:ml-0 mb-1
             w-full max-h-[20rem]
             object-cover object-left-top
             transition duration-300 ease-in-out
+            border md:border-0
             group-hover:rounded-lg 
             "
         />

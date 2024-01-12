@@ -29,7 +29,7 @@ export default async function Home() {
       <About aboutBody={profile.about} profileImage={profile.profile_img}/>
       <Projects projects={projects as ProjectData[]}/>
       <Skills skills={profile.skills} />
-      <Contact email={profile.contacts.find((contact: { type: string; }) => contact.type === "email").url}/>
+      <Contact contacts={profile.contacts}/>
     </main>
   );
 }

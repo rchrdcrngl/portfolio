@@ -4,19 +4,20 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/use-section-in-view";
+import { Contact } from "@/lib/types";
+import Link from "next/link";
 
 type ContactsProps = {
-  email: string;
+  contacts: Contact[];
 }
 
-export default function Contact({ email }: ContactsProps ) {
+export default function Contact({ contacts }: ContactsProps) {
   const { ref } = useSectionInView("Contact");
-
   return (
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-28 w-screen px-24"
       initial={{
         opacity: 0,
       }}
@@ -30,35 +31,12 @@ export default function Contact({ email }: ContactsProps ) {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
-
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a className="underline" href={`mailto:${email}`}>
-          {email}
-        </a>{" "}
-        or through this form.
-      </p>
-
-      <form
-        className="mt-10 flex flex-col dark:text-black"
-      >
-        <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={500}
-          placeholder="Your email"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="message"
-          placeholder="Your message"
-          required
-          maxLength={5000}
-        />
-      </form>
+      <div className="grid grid-cols-3 grid-rows-2">
+        <div className="font-clash text-xl md:text-5xl border col-span-2 flex items-end p-8 bg-primary-500 text-primary-100">Contact me @</div>
+        {contacts.map((contact,index)=>(
+          <Link href={contact.url} className={`border w-full h-52 flex justify-center items-center text-xl md:text-3xl bg-secondary-${Math.max(500-index*100,100)} text-accent-${Math.min(500+index*100,900)}`}>{contact.name}</Link>
+        ))}
+      </div>
     </motion.section>
   );
 }

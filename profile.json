@@ -31,9 +31,9 @@
     ],
     "projects_description":"The projects below are personal side projects that I have made as a student. Most of it are apps that I use on a daily basis. Here are some projects I have made for the past three years.",
     "contacts":[
-        {"type":"github","url":"https://github.com/rchrdcrngl"},
-        {"type":"linkedin","url":"https://www.linkedin.com/in/richard-maru-caringal"},
-        {"type":"email","url":"richard.caringal23@gmail.com"},
-        {"type":"facebook","url":"https://facebook.com/richardmaru"}
+        {"name":"Email","type":"email","url":"mailto:richard.caringal23@gmail.com"},
+        {"name":"GitHub", "type":"github","url":"https://github.com/rchrdcrngl"},
+        {"name":"LinkedIn","type":"linkedin","url":"https://www.linkedin.com/in/richard-maru-caringal"},
+        {"name":"Facebook","type":"facebook","url":"https://facebook.com/richardmaru"}
     ]
 }

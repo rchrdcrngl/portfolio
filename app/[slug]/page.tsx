@@ -1,6 +1,7 @@
 import { ProjectData } from "@/lib/types";
 import { notFound } from "next/navigation";
 import * as fs from "fs";
+import ProjectInfo from "@/components/project-intro";
 
 export const dynamicParams = false;
 
@@ -29,7 +30,7 @@ export default async function ProjectPage({
 
   return (
     <main>
-      <h1>{data?.title}</h1>
+      <ProjectInfo title={data.title} description={data.description} />
     </main>
   );
 }

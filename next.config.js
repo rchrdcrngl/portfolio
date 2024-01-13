@@ -1,13 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
   images: {
     loader: "akamai",
     path: "/",
-    domains: ["github.com"]
+    domains: ["localhost","github.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+    unoptimized: true,
   },
   basePath: "/portfolio",
-  assetPrefix: "/portfolio"
-}
+  assetPrefix: "/portfolio",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

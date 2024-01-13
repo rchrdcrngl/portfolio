@@ -11,7 +11,7 @@ export type ProjectData = {
   title: string;
   slug: string;
   description: string;
-  type: string;
+  type: 'mobile' | 'desktop';
   technology: string[];
   source_code?: string | null;
   latest_output?: string | null;

@@ -6,15 +6,15 @@ import ProjectInfo from "@/components/project-intro";
 export const dynamicParams = false;
 
 async function getData(slug: string) {
-  let dataRaw = fs.readFileSync("data.json", "utf8");
-  let projects = JSON.parse(dataRaw) as ProjectData[];
+  const dataRaw = fs.readFileSync("data.json", "utf8");
+  const projects = JSON.parse(dataRaw) as ProjectData[];
   return projects.find((p) => p.slug === slug);
 }
 
 export function generateStaticParams() {
   let dataRaw = fs.readFileSync("data.json", "utf8");
   let projects = JSON.parse(dataRaw) as ProjectData[];
-  return projects.map((p) => { slug: p.slug });
+  return projects.map((p) => ({ slug: p.slug }));
 }
 
 export default async function ProjectPage({
@@ -25,6 +25,7 @@ export default async function ProjectPage({
   const data = await getData(params.slug);
 
   if (data == undefined) {
+    console.log("notFound")
     notFound();
   }
 

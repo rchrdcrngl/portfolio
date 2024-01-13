@@ -13,7 +13,8 @@ export type ProjectData = {
   description: string;
   type: string;
   technology: string[];
-  latestOutput?: string | null;
+  source_code?: string | null;
+  latest_output?: string | null;
   images: ProjectImage[];
 };
 

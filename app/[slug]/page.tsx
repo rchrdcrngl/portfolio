@@ -31,7 +31,7 @@ export default async function ProjectPage({
 
   return (
     <main>
-      <ProjectInfo title={data.title} description={data.description} />
+      <ProjectInfo title={data.title} description={data.description} image={data.images[0]} sourceCode={data.source_code} latestOutput={data.latest_output} />
     </main>
   );
 }

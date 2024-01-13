@@ -28,21 +28,29 @@ export default function Project({ project }: ProjectProps) {
       className="group mb-16 md:mb-10 last:mb-0"
     >
       <div className="w-full rounded-lg sm:pr-8 relative transition sm:group-even:pl-8">
-        <Image
-          src={project.images[0].url}
-          alt={project.images[0].description ?? "Project I worked on"}
-          quality={95}
-          width={0}
-          height={0}
-          sizes="100%"
+        <div
           className="relative block ml-6 md:ml-0 mb-1
             w-full max-h-[20rem]
-            object-cover object-left-top
-            transition duration-300 ease-in-out
             border md:border-0
-            group-hover:rounded-lg 
+            group-hover:rounded-2xl
+            glow
+            overflow-hidden
+          "
+        >
+          <Image
+            src={project.images[0].url}
+            alt={project.images[0].description ?? "Project I worked on"}
+            quality={95}
+            width={0}
+            height={0}
+            sizes="100%"
+            className="w-full h-full object-cover object-left-top
+            transition duration-300 ease-in-out 
+            group-hover:scale-[1.2]
             "
-        />
+          />
+        </div>
+
         <div className="relative px-6 md:px-0 md:pt-10 w-full flex flex-col h-full">
           <Link
             className="relative text-2xl md:text-5xl font-clash font-bold uppercase hover:underline"

@@ -169,6 +169,6 @@ html.dark {
   -webkit-text-stroke-color: inherit;
 }
 
-.skill-item::after {
-  
+.glow:hover {
+  box-shadow: 0 3px 27px -3px #68abcf;
 }

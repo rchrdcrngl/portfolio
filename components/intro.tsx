@@ -72,7 +72,7 @@ export default function Intro({ name, description, linkedIn, github, chips }: In
 
               <a
                 className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-                href="/CV.pdf"
+                href="https://github.com/rchrdcrngl/portfolio/blob/master/public/CV.pdf?raw=true"
                 download
               >
                 Download CV{" "}

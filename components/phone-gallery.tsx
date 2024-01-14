@@ -2,10 +2,8 @@
 
 import { ProjectImage } from "@/lib/types";
 import Image from "next/image";
-import { getWindowDimensions } from "@/lib/utils";
-import clsx from "clsx";
-import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 type PhoneGalleryProps = {
   images: ProjectImage[];

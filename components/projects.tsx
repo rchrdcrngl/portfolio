@@ -19,7 +19,7 @@ export default function Projects({ projects }: ProjectsProps) {
       <div className="relative w-full px-0 md:px-24 md:gap-12 flex flex-col md:flex-row">
         <div className="w-full">
           {projects.map((project, index) => (
-            index%2==1 ?
+            (index+1)%2==1 ?
             <React.Fragment key={index}>
               <Project project={project} />
               <ProjectSpace />
@@ -29,7 +29,7 @@ export default function Projects({ projects }: ProjectsProps) {
         </div>
         <div className="w-full">
           {projects.map((project, index) => (
-            index%2==0 ?
+            (index+1)%2==0 ?
             <React.Fragment key={index}>
               <ProjectSpace />
               <Project project={project} />

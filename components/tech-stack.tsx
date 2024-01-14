@@ -34,7 +34,7 @@ export default function TechStack({ technologies }: TechStackProps) {
           </h1>
         </div>
         <div className="relative w-full md:w-3/5 h-auto flex justify-center items-center">
-          <ul className="flex flex-wrap justify-start gap-2 text-lg md:text-2xl">
+          <ul className="flex flex-wrap justify-start gap-2 text-lg md:text-2xl px-4">
             {technologies.map((tech, index) => (
               <motion.li
                 className="px-5 py-1 md:py-3 bg-white borderBlack rounded-full dark:bg-white/10 dark:text-white/80"

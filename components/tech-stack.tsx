@@ -24,7 +24,7 @@ export default function TechStack({ technologies }: TechStackProps) {
   return (
     <section
       id="technologies"
-      className="relative mb-28 h-full scroll-mt-28 sm:mb-40"
+      className="relative my-28 h-full scroll-mt-28 sm:my-40"
     >
       <div className="flex flex-col md:flex-row w-full h-max">
         <div className="relative w-full md:w-2/5 px-3 h-full flex items-center justify-center mb-4 md:mb-0">

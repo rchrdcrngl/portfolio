@@ -14,7 +14,7 @@ type ProjectInfoProps = {
 
 export default function ProjectInfo({ title, description, image, sourceCode, latestOutput }: ProjectInfoProps) {
   return (
-    <section id="info" className="w-full h-screen">
+    <section id="info" className="relative w-full h-screen">
       { image && <FadeInBackground image={image} /> }
       <div className="opacity-60 bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
       <div className="opacity-60 bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
@@ -34,7 +34,7 @@ export default function ProjectInfo({ title, description, image, sourceCode, lat
 
 function FadeInBackground({ image }: { image:ProjectImage }){
     return(
-        <div className="absolute w-full h-1/2 overflow-hidden z-[-15] fade-img">
+        <div className="relative w-full h-1/2 overflow-hidden z-[-15] fade-img">
             <Image
                 src={image.url}
                 alt={image.description || "Image"}
@@ -42,7 +42,7 @@ function FadeInBackground({ image }: { image:ProjectImage }){
                 width={0}
                 height={0}
                 sizes="100%"
-                className="h-full w-full object-cover object-left-top opacity-50 dark:opacity-80 scale-150 md:scale-100"
+                className="relative h-full w-full object-cover object-left-top opacity-50 dark:opacity-80 scale-150 md:scale-100"
             />
         </div>
     );

@@ -17,23 +17,6 @@ export default function PhoneGallery({ images }: PhoneGalleryProps) {
     target: sectionRef,
     offset: ["start end", "end end"],
   });
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowDimensions(getWindowDimensions());
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  const phoneY = useTransform(scrollYProgress, y => y < parseFloat((100/(50*images.length+100)).toFixed(2))? 0: scrollY.get() - windowDimensions.innerHeight );
-  const phoneOpacity = useTransform(scrollYProgress, [parseFloat((100/(50*images.length+100)).toFixed(2))/3, parseFloat((100/(50*images.length+100)).toFixed(2))], [0, 1]);
-  const phoneScale = useTransform(scrollYProgress, [0, parseFloat((100/(images.length+1)).toFixed(2))], [0.5, 1]);
-  useMotionValueEvent(scrollY, "change", () => {
-    console.log(phoneY.get())
-  })
   const x = useTransform(scrollYProgress, [0, 1], ["50%", "-95%"]);
   return (
     <section ref={sectionRef} className="relative h-[300vh]">

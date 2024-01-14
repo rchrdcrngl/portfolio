@@ -22,7 +22,7 @@ export default function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <div className={clsx("fixed top-0 h-[4.5] pt-6 pl-5 hidden md:block")}>RCHRD CRNGL</div>
+      <div className={clsx("fixed top-0 h-[4.5] pt-6 pl-5 hidden md:block cursor-default")}>RCHRD CRNGL</div>
 
       <nav className="flex fixed left-1/2 h-[4.5rem] -translate-x-1/2 py-2 sm:py-0 ">
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5 py-3">

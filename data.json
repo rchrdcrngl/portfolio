@@ -1,9 +1,24 @@
 [
     {
+        "title": "Mommy Badets Online Store",
+        "slug": "mbos",
+        "description": "An ecommerce web app built with Java. The app is created for a client in compliance with my Software Engineering course. The app has an admin dashboard where the users can manage orders and products while customers can order directly from the site.",
+        "type": "desktop",
+        "technology": ["HTML", "CSS", "Java EE", "JSP", "Servlet", "JSF", "PrimeFaces", "Maven", "PostgreSQL", "Brevo", "UploadCare"],
+        "latest_output": "https://mbos.store/",
+        "images": [
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/home.jpg?raw=true","description":"Home Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/product_page.jpg?raw=true","description":"Product Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/checkout_page.jpg?raw=true","description":"Checkout Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/orderm_page.jpg?raw=true","description":"Order Management Page"},
+            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/productm_page.jpg?raw=true","description":"Product Management Page"}
+        ]
+    },
+    {
         "title": "RemCards PWA",
         "slug": "remcards-pwa",
         "description": "A progressive web app written in TypeScript. It uses an API written using ExpressJS and deployed on Cyclic. Next.JS is the framework used for its frontend and is currently deployed on Vercel.",
-        "type": "web",
+        "type": "desktop",
         "technology": ["TypeScript","React","NextJS"],
         "latest_output": "https://remcards.vercel.app",
         "images": [
@@ -11,6 +26,21 @@
             {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/remcards-pwa/schedule.jpg?raw=true","description":"Schedule Page"},
             {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/remcards-pwa/profile.jpg?raw=true","description":"Profile Page"},
             {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/remcards-pwa/login.jpg?raw=true","description":"Login Page"}
+        ]
+    },
+    {
+        "title": "Weight Tracker",
+        "slug": "weightracker",
+        "description": "A lightweight and fast weight tracker. This app is created with Flutter. It stores the data using SQLite. The app shows the lowest and highest point of weight. Displays data through a line graph.",
+        "type": "mobile",
+        "technology": ["Flutter", "Dart"],
+        "source_code": "https://github.com/rchrdcrngl/weightracker",
+        "latest_output": "https://github.com/rchrdcrngl/weightracker/blob/main/apks/WeighTracker_v1.0.apk",
+        "images": [
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Dashboard.jpg?raw=true","description":"Dashboard"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Weight%20History.jpg?raw=true","description":"Weight History"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Add%20Weight.jpg?raw=true","description":"Add Weight"},
+            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Settings.jpg?raw=true","description":"Settings"}
         ]
     },
     {
@@ -50,7 +80,7 @@
         "title": "RemCards Firebase Web",
         "slug": "remcards-firebase-web",
         "description": " A simple web app that I have created using JavaScript, Bootstrap, HTML, and CSS. Like the Andrid Java app, it uses the Firebase Real-Time database to add, store, delete, and show RemCards of the user. It is also hosted on Firebase.",
-        "type": "web",
+        "type": "desktop",
         "technology": ["HTML","CSS","JavaScript","Firebase","Bootstrap"],
         "source_code": "https://github.com/rchrdcrngl/RemCardsProject/tree/main/RemCardsWeb-Firebase",
         "latest_output": "https://remcards.web.app/",
@@ -61,36 +91,6 @@
             {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsWeb-Firebase/screenshots/Today%20Page.png?raw=true","description":"Today Page"},
             {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsWeb-Firebase/screenshots/Focus%20Page.png?raw=true","description":"Focus Page"},
             {"url":"https://github.com/rchrdcrngl/RemCardsProject/blob/main/RemCardsWeb-Firebase/screenshots/Add%20RemCard.png?raw=true","description":"Add RemCard Page"}
-        ]
-    },
-    {
-        "title": "Weight Tracker",
-        "slug": "weightracker",
-        "description": "A lightweight and fast weight tracker. This app is created with Flutter. It stores the data using SQLite. The app shows the lowest and highest point of weight. Displays data through a line graph.",
-        "type": "mobile",
-        "technology": ["Flutter", "Dart"],
-        "source_code": "https://github.com/rchrdcrngl/weightracker",
-        "latest_output": "https://github.com/rchrdcrngl/weightracker/blob/main/apks/WeighTracker_v1.0.apk",
-        "images": [
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Dashboard.jpg?raw=true","description":"Dashboard"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Weight%20History.jpg?raw=true","description":"Weight History"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Add%20Weight.jpg?raw=true","description":"Add Weight"},
-            {"url":"https://github.com/rchrdcrngl/weightracker/blob/main/screenshots/Settings.jpg?raw=true","description":"Settings"}
-        ]
-    },
-    {
-        "title": "Mommy Badets Online Store",
-        "slug": "mbos",
-        "description": "An ecommerce web app built with Java. The app is created for a client in compliance with my Software Engineering course. The app has an admin dashboard where the users can manage orders and products while customers can order directly from the site.",
-        "type": "web",
-        "technology": ["HTML", "CSS", "Java EE", "JSP", "Servlet", "JSF", "PrimeFaces", "Maven", "PostgreSQL", "Brevo", "UploadCare"],
-        "latest_output": "https://mbos.store/",
-        "images": [
-            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/home.jpg?raw=true","description":"Home Page"},
-            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/product_page.jpg?raw=true","description":"Product Page"},
-            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/checkout_page.jpg?raw=true","description":"Checkout Page"},
-            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/orderm_page.jpg?raw=true","description":"Order Management Page"},
-            {"url":"https://github.com/rchrdcrngl/portfolio/blob/master/images/mbos/productm_page.jpg?raw=true","description":"Product Management Page"}
         ]
     }
 ]

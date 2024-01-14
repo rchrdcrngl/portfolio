@@ -5,6 +5,7 @@ import ProjectInfo from "@/components/project-intro";
 import PhoneGallery from "@/components/phone-gallery";
 import LaptopGallery from "@/components/laptop-gallery";
 import TechStack from "@/components/tech-stack";
+import { Metadata, ResolvingMetadata } from "next/types";
 
 export const dynamicParams = false;
 
@@ -12,6 +13,16 @@ async function getData(slug: string) {
   const dataRaw = fs.readFileSync("data.json", "utf8");
   const projects = JSON.parse(dataRaw) as ProjectData[];
   return projects.find((p) => p.slug === slug);
+}
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const data = await getData(params.slug);
+  return {
+    title: `${data?.title} | Richard Maru Caringal`,
+  }
 }
 
 export function generateStaticParams() {

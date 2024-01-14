@@ -12,7 +12,7 @@ export default function NotFound() {
         <div>
           <h1 className='text-5xl md:text-9xl font-clash font-bold'>Not Found</h1>
           <p>Could not find requested resource</p>
-          <a href="/">Return Home <FaHome className='inline-block align-middle'/></a>
+          <Link href="/">Return Home <FaHome className='inline-block align-middle'/></Link>
         </div>
       </section>
     </main>

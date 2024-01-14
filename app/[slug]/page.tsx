@@ -22,6 +22,7 @@ export async function generateMetadata(
   const data = await getData(params.slug);
   return {
     title: `${data?.title} | Richard Maru Caringal`,
+    description: data?.description.substring(0,100) + (data?.description && data?.description.length > 100? '...': ''),
   }
 }
 

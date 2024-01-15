@@ -36,12 +36,12 @@ const Card = ({ image, key }:{ image:ProjectImage, key:number }) => {
     return (
       <div
         key={key}
-        className="group relative h-[65vmin] w-[35vmin] overflow-hidden flex justify-center items-center
+        className="group relative h-[85vmax] w-[55vmax] md:h-[65vmin] md:w-[35vmin] overflow-hidden flex justify-center items-center
                    transition-transform duration-300 hover:scale-110"
       >
         <div className="relative h-full w-auto">
           <img src={"phone.webp"} className="relative h-full w-auto z-[5]" />
-          <div className="absolute top-[1.95vmin] left-[2.35vmin] right-[2.35vmin] bottom-[1.95vmin] rounded-[1.5vmin] z-0 overflow-hidden">
+          <div className="absolute top-[1.95vmin] left-[2.5vmax] md:left-[2.35vmin] right-[2.5vmax] md:right-[2.35vmin] bottom-[1.95vmax] md:bottom-[1.95vmin] rounded-[8vmax] md:rounded-[1.5vmin] z-0 overflow-hidden">
               <Image
               height={0}
               width={0}

@@ -41,7 +41,7 @@ const Card = ({ image, key }:{ image:ProjectImage, key:number }) => {
       >
         <div className="relative h-full w-auto">
           <img src={"phone.webp"} className="relative h-full w-auto z-[5]" />
-          <div className="absolute top-[1.95vmin] left-[2.5vmax] md:left-[2.35vmin] right-[2.5vmax] md:right-[2.35vmin] bottom-[1.95vmax] md:bottom-[1.95vmin] rounded-[8vmax] md:rounded-[1.5vmin] z-0 overflow-hidden">
+          <div className="absolute top-[1.95vmax] md:top-[1.95vmin] left-[2.5vmax] md:left-[2.35vmin] right-[2.5vmax] md:right-[2.35vmin] bottom-[1.95vmax] md:bottom-[1.95vmin] rounded-[8vmax] md:rounded-[1.5vmin] z-0 overflow-hidden">
               <Image
               height={0}
               width={0}

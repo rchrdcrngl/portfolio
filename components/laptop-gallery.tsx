@@ -15,7 +15,7 @@ export default function LaptopGallery({ images }: LaptopGalleryProps) {
     target: sectionRef,
     offset: ["start end", "end end"],
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["95%", "-95%"]);
   return (
     <section ref={sectionRef} className="relative h-[300vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
@@ -36,25 +36,26 @@ const Card = ({ image, key }:{ image:ProjectImage, key:number }) => {
     return (
       <div
         key={key}
-        className="group relative w-[90vw] md:w-[calc(100vw/2)] px-4 py-2 overflow-hidden 
+        className="group relative h-auto w-[75vmin] py-24 overflow-hidden 
                    transition-transform duration-300 hover:scale-105"
       >
-        <img src={"laptop.webp"} className="absolute inset-0 h-full w-full z-[5]" />
-        <div className="relative h-full w-full pt-3 px-4 pb-12 md:pt-6 md:px-14 md:pb-24 z-0 overflow-hidden">
-            <Image
-            height={0}
-            width={0}
-            sizes="100%"
-            src={image.url}
-            className="relative h-full w-full object-cover object-center"
-            alt={image.description||"Project gallery image"}
-            />
-            {/*
-            <div className="absolute z-[3] pt-6 px-14 pb-24 h-full w-full opacity-0 group-hover:opacity-100 
-                            flex justify-center items-center group-hover:bg-teal-500 inset-0">
-                <p className="text-white font-clash font-bold text-xl">{image.description}</p>
-            </div>
-            */}
+        
+        <div className="relative h-full w-full">
+          <img src={"laptop.webp"} className="relative h-full w-full z-[5]" />
+          <div className="absolute top-[3vmin] left-[7vmin] right-[7vmin] bottom-[10vmin] z-0 overflow-hidden">
+              <Image
+              height={0}
+              width={0}
+              sizes="100%"
+              src={image.url}
+              className="relative h-full w-full object-cover object-center"
+              alt={image.description||"Project gallery image"}
+              />
+              <div className="absolute z-[3] px-4 h-full w-full opacity-0 group-hover:opacity-100 
+                              flex justify-center items-center group-hover:bg-teal-500 inset-0">
+                  <p className="text-white font-clash font-bold text-xl">{image.description}</p>
+              </div>
+          </div>
         </div>
       </div>
     );

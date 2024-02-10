@@ -11,7 +11,7 @@ import ProfileCamera from "./camera";
 import { getWindowDimensions } from "@/lib/utils";
 
 type AboutProps = {
-  aboutBody: string;
+  aboutBody: string[];
   profileImage?: string | null;
 };
 
@@ -74,7 +74,7 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
                 whileInView={{ opacity: 1, x: 0 }}
                 /*style={{ y: scrollY, translateY: '-100vh'}}*/
               >
-                {aboutBody.split("%np%").map((p, i) => (
+                {aboutBody.map((p, i) => (
                   <p
                     key={i}
                     className={i !== 0 ? "mt-1 inline-block" : "block"}

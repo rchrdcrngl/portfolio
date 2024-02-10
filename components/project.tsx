@@ -32,7 +32,6 @@ export default function Project({ project }: ProjectProps) {
           className="relative block ml-6 md:ml-0 mb-1
             w-full max-h-[20rem]
             border md:border-0
-            group-hover:rounded-2xl
             glow
             overflow-hidden
           "

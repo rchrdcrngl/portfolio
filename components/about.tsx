@@ -9,6 +9,9 @@ import {
 import { useSectionInView } from "@/hooks/use-section-in-view";
 import ProfileCamera from "./camera";
 import { getWindowDimensions } from "@/lib/utils";
+import { Bitter } from 'next/font/google';
+
+const bitter = Bitter({ weight: '400', subsets: ['latin']})
 
 type AboutProps = {
   aboutBody: string[];
@@ -69,7 +72,7 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
           <div className="flex flex-col md:flex-row md:justify-evenly w-screen h-max">
             <div className="relative w-full md:w-3/4 sticky px-10 md:px-5 h-full md:h-auto">
               <motion.div
-                className="text-xl leading-10 md:text-3xl font-clash px-4"
+                className={`text-xl leading-10 md:text-3xl px-4 ${bitter.className}`}
                 initial={{ opacity: 0, x: 200 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 /*style={{ y: scrollY, translateY: '-100vh'}}*/

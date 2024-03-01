@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -10,6 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/hooks/use-section-in-view";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import MouseAstronaut from "./astronaut";
+import WhatsUp from "@/lib/eegg";
 
 type IntroProps = {
   name: string;
@@ -27,6 +28,10 @@ export default function Intro({ name, description, linkedIn, github, chips }: In
     target: sectionRef,
     offset: ["start start", "end end"],
   });
+
+  useEffect(()=>{
+    WhatsUp();
+  },[])
   
   return (
     <section

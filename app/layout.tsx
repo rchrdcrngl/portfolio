@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
@@ -27,8 +26,6 @@ const archivo = localFont({
   variable: '--font-archivo',
 })
 
-//const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
   title: "Richard Maru Caringal",
   description: "Richard Maru is a Computer Science senior at the University of Santo Tomas.",
@@ -49,8 +46,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-
-            <Toaster position="top-right" />
+            {/* <Toaster /> */}
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>

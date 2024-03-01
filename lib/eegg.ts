@@ -1,5 +1,8 @@
 import toast from 'react-hot-toast';
 
+/*
+* TODO: Fix toaster to show up 
+*/
 export default function WhatsUp(){
     const notifyBirthday = () => toast('Heyy it\'s my birthdayy!', {icon: '🎂'});
     const notifyTwiceBirthday = () => toast(

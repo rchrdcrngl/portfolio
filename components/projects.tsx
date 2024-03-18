@@ -14,7 +14,7 @@ export default function Projects({ projects }: ProjectsProps) {
   const { ref } = useSectionInView("Projects", 0.1);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28 w-full">
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-28 w-full overflow-hidden">
       <h1 className="mb-4 md:mb-8 text-5xl font-bold font-clash uppercase text-center">Projects</h1>
       <div className="relative w-full px-0 md:px-24 md:gap-12 flex flex-col md:flex-row">
         <div className="w-full">

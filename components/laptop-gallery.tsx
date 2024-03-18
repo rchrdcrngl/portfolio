@@ -52,7 +52,7 @@ const Card = ({ image, key }:{ image:ProjectImage, key:number }) => {
               alt={image.description||"Project gallery image"}
               />
               <div className="absolute z-[3] px-4 h-full w-full opacity-0 group-hover:opacity-100 
-                              flex justify-center items-center group-hover:bg-teal-500 inset-0">
+                              flex justify-center items-center group-hover:bg-teal-500 inset-0 text-center">
                   <p className="text-white font-clash font-bold text-xl">{image.description}</p>
               </div>
           </div>

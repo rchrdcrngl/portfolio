@@ -37,7 +37,7 @@ export default function Intro({ name, description, linkedIn, github, chips }: In
     <section
       ref={ref}
       id="home"
-      className="w-full h-screen"
+      className="w-full h-screen overflow-hidden"
     >
       
       <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
@@ -47,7 +47,7 @@ export default function Intro({ name, description, linkedIn, github, chips }: In
       <MouseAstronaut style={"h-40 md:h-80 right-0 bottom-0 z-[-1]"} />
 
       <div className="h-full z-[5] flex items-center">
-        <div className="h-full flex items-center pl-10 z-10">
+        <div className="h-full flex items-center px-10 z-10">
           <div>
             <h3 className="font-archivo text-lg md:text5xl">Hi👋, I'm </h3>
             <h1 className="font-clash text-bold text-5xl md:text-9xl">

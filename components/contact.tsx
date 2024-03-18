@@ -17,7 +17,7 @@ export default function Contact({ contacts }: ContactsProps) {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-screen px-0 md:px-24"
+      className="mb-20 sm:mb-28 w-full px-0 md:px-24"
       initial={{
         opacity: 0,
       }}

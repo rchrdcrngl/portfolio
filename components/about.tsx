@@ -33,12 +33,12 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
     offset: ["start end", "end end"],
   });
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions);
-  const [isDesktop, setIsDesktop] = useState(windowDimensions.innerWidth > 550);
+  const isDesktop = windowDimensions.innerWidth > 550;
+  console.log('desktop?',isDesktop)
 
   useEffect(() => {
     const handleResize = () => {
       setWindowDimensions(getWindowDimensions());
-      setIsDesktop(windowDimensions.innerWidth > 550);
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -83,7 +83,7 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
         <div className="flex flex-col md:flex-row">
           <div ref={sectionRef} className="sticky w-full top-0 left-0 pt-0 md:pt-32 px-2 md:px-12 flex flex-col justify-around">
             {aboutBody.map((p, i) => (
-              <div className="h-[75vh] flex flex-col px-6">
+              <div key={i} className="h-[75vh] flex flex-col px-6">
                 {
                   p.heading && 
                   <motion.p
@@ -96,7 +96,6 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
                   </motion.p>
                 }
                 <motion.p
-                  key={i}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5, ease: 'easeIn' }}

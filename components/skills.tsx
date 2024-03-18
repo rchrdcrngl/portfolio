@@ -12,11 +12,11 @@ type SkillsProps = {
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    x: 100,
   },
   animate: (index: number) => ({
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       delay: 0.05 * index,
     },
@@ -30,7 +30,7 @@ export default function Skills( { skills }: SkillsProps ) {
     <section
       id="skills"
       ref={ref}
-      className="relative mb-28 h-full scroll-mt-28 sm:mb-40"
+      className="relative mb-28 h-full scroll-mt-28 sm:mb-40 overflow-hidden"
     >
       <div className="flex flex-row md:justify-evenly w-full h-max">
         <div className="relative w-1/5 h-full flex justify-center">
@@ -41,7 +41,7 @@ export default function Skills( { skills }: SkillsProps ) {
           </h1>
         </div>
         <div className="relative w-4/5 h-auto flex justify-center items-center">
-          <ul className="flex flex-wrap justify-start gap-1 text-2xl font-clash">
+          <ul className="flex flex-wrap justify-start gap-1 text-2xl font-bold font-clash px-1 md:px-3">
             {skills.map((skill, index) => (
               <motion.li
                 className="px-5 py-1 md:py-3 skill-item"
@@ -50,6 +50,7 @@ export default function Skills( { skills }: SkillsProps ) {
                 initial="initial"
                 whileInView="animate"
                 custom={index}
+                viewport={{ once: true }}
               >
                 {skill}
               </motion.li>

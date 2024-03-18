@@ -78,7 +78,7 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
     aboutBody && (
       <motion.section id="about" ref={ref} className="snap-center relative mb-20 rounded-3xl" style={{ background }}>
         <div className=" h-[75vh] flex items-center justify-center">
-          <h1 className="text-5xl font-bold font-clash text-center"><span className="hidden md:inline-block mr-2">╔════▣</span>Who Am I?<span className="hidden md:inline-block ml-2">▣════╗</span></h1>
+          <h1 className="text-5xl font-bold font-clash text-center"><span className="hidden md:inline-block mr-2">▣════▣</span>Who Am I?<span className="hidden md:inline-block ml-2">▣════▣</span></h1>
         </div>
         <div className="flex flex-col md:flex-row">
           <div ref={sectionRef} className="sticky w-full top-0 left-0 pt-0 md:pt-32 px-2 md:px-12 flex flex-col justify-around">

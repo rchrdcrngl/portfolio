@@ -2,8 +2,9 @@
 
 import { ProjectImage } from "@/lib/types";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
+import Lightbox from "./lightbox";
 
 type LaptopGalleryProps = {
     images: ProjectImage[];
@@ -16,30 +17,34 @@ export default function LaptopGallery({ images }: LaptopGalleryProps) {
     offset: ["start end", "end end"],
   });
   const x = useTransform(scrollYProgress, [0, 1], ["95%", "-95%"]);
+  const [selectedImage, setSelectedImage] = useState<ProjectImage|null>(null);
+  
   return (
-    <section ref={sectionRef} className="relative h-[300vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <div className="absolute h-full w-full px-4 flex justify-center items-center">
-            <h1 className="text-6xl md:text-9xl font-clash font-bold text-outline opacity-20 uppercase">Sample Screenshots</h1>
+    <>
+      <Lightbox selectedImage={selectedImage} callback={setSelectedImage}/>
+      <section ref={sectionRef} className="relative h-[300vh]">
+        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+          <div className="absolute h-full w-full px-4 flex justify-center items-center">
+              <h1 className="text-6xl md:text-9xl font-clash font-bold text-outline opacity-20 uppercase">Sample Screenshots</h1>
+          </div>
+          <motion.div style={{ x }} className="flex gap-12 px-6">
+            {images.map((image, index) => {
+              return <Card image={image} key={index} onClick={()=>setSelectedImage(image)}/>;
+            })}
+          </motion.div>
         </div>
-        <motion.div style={{ x }} className="flex gap-12 px-6">
-          {images.map((image, index) => {
-            return <Card image={image} key={index} />;
-          })}
-        </motion.div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
-const Card = ({ image, key }:{ image:ProjectImage, key:number }) => {
-    return (
-      <div
+const Card = ({ image, key, onClick }:{ image:ProjectImage, key:number, onClick:(a:any)=>void }) => {
+  return (
+    <div
+      onClick={onClick}
         key={key}
         className="group relative h-auto w-[75vmin] py-24 overflow-hidden 
-                   transition-transform duration-300 hover:scale-105"
-      >
-        
+                   transition-transform duration-300 hover:scale-105 cursor-pointer">
         <div className="relative h-full w-full">
           <img src={"laptop.webp"} className="relative h-full w-full z-[5]" />
           <div className="absolute top-[3vmin] left-[7vmin] right-[7vmin] bottom-[10vmin] z-0 overflow-hidden">

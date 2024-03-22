@@ -1,4 +1,4 @@
-import { ProjectData } from "@/lib/types";
+import { ProjectData, ProjectImage } from "@/lib/types";
 import { notFound } from "next/navigation";
 import * as fs from "fs";
 import ProjectInfo from "@/components/project-intro";
@@ -6,6 +6,8 @@ import PhoneGallery from "@/components/phone-gallery";
 import LaptopGallery from "@/components/laptop-gallery";
 import TechStack from "@/components/tech-stack";
 import { Metadata, ResolvingMetadata } from "next/types";
+import Lightbox from "@/components/lightbox";
+import { useState } from "react";
 
 export const dynamicParams = false;
 
@@ -47,7 +49,7 @@ export default async function ProjectPage({
   return (
     <main>
       <ProjectInfo title={data.title} description={data.description} image={data.images[0]} sourceCode={data.source_code} latestOutput={data.latest_output} />
-      { data.type === 'mobile' ? <PhoneGallery images={data.images}/> : <LaptopGallery images={data.images}/>}
+      { data.type === 'mobile' ? <PhoneGallery images={data.images} /> : <LaptopGallery images={data.images} />}
       <TechStack technologies={data.technology} />
     </main>
   );

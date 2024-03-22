@@ -70,8 +70,8 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
     scrollYProgress,
     [0.10, 0.20],
     theme=='light'?
-    ['rgba(0,0,0,0)', 'rgba(210, 224, 180,1)']:
-    ['rgba(0,0,0,0)', 'rgba(120, 143, 120,1)']
+    ['rgba(0,0,0,0)', 'rgba(219, 215, 251,1)']:
+    ['rgba(0,0,0,0)', 'rgba(75, 151, 20,1)']
   )
 
   return (

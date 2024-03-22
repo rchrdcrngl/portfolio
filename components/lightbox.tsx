@@ -4,14 +4,15 @@ const Lightbox = ({ selectedImage, callback }: { selectedImage: ProjectImage | n
     return (
     selectedImage && (
         <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-75 z-[200]">
-            <div className="relative z-[210]">
+            <div className="relative">
             <img
                 src={selectedImage.url}
                 alt="Selected Image"
-                className="max-h-full"
+                className="max-h-full z-[205]"
+                onClick={()=>callback(null)}
             />
             <button
-                className="absolute top-4 right-4 p-2 text-white bg-black rounded-full hover:bg-opacity-50"
+                className="absolute top-4 right-4 p-2 text-white bg-black rounded-full hover:bg-opacity-50 z-[210]"
                 onClick={()=>callback(null)}
             >
                 <svg

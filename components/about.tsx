@@ -106,7 +106,7 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
             ))}
             
           </div>
-          <div className="sticky h-screen w-full md:w-1/3 top-0 right-0 overflow-hidden ">
+          <div className="relative md:sticky h-screen w-full md:w-1/3 top-0 right-0 overflow-hidden ">
             {profileImage && (
               <motion.div
                 className="absolute h-max w-full flex justify-center px-[1.5rem] md:px-[3rem] mt-12 md:mt-[20vh]"

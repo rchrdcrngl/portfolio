@@ -5,8 +5,7 @@
     "description":"I'm a full stack developer and a Computer Science senior at the University of Santo Tomas. Let's see more of what I do!",
     "about":[
         {"heading": "Education 👨‍🎓", "paragraph": "I hold a Bachelor of Science in Computer Science with a focus on Data Science."},
-        {"heading": "What I do 🌐", "paragraph": "I specialize in Java and Next.js for web development projects."},
-        {"heading": "Commitments 📈", "paragraph": "Eager to stay at the forefront of technology, I am always on the lookout for opportunities to learn and explore new tools and frameworks."},
+        {"heading": "What I do 🌐", "paragraph": "I specialize in Java and Next.js for web development projects. Eager to stay at the forefront of technology, I am always on the lookout for opportunities to learn and explore new tools and frameworks."},
         {"paragraph": "Currently, I am actively seeking a full-time position as a software developer 👨‍💻"}
     ],
     "profile_img":"profile.webp",

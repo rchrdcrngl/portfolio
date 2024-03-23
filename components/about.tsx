@@ -81,7 +81,7 @@ export default function About({ aboutBody, profileImage }: AboutProps) {
           <h1 className="text-5xl font-bold font-clash text-center"><span className="hidden md:inline-block mr-2">▣════▣</span>Who Am I?<span className="hidden md:inline-block ml-2">▣════▣</span></h1>
         </div>
         <div className="flex flex-col md:flex-row">
-          <div ref={sectionRef} className="sticky w-full top-0 left-0 pt-0 md:pt-32 px-2 md:px-12 flex flex-col justify-around">
+          <div ref={sectionRef} className="relative md:sticky w-full top-0 left-0 pt-0 md:pt-32 px-2 md:px-12 flex flex-col justify-around">
             {aboutBody.map((p, i) => (
               <div key={i} className="h-[75vh] flex flex-col px-6">
                 {

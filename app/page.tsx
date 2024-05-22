@@ -25,8 +25,8 @@ export default async function Home() {
   return (
     <main className="snap-y snap-proximity">
       <Intro name={profile.short_name} description={profile.description} chips={profile.chips} linkedIn={profile.contacts.find((contact: { type: string; }) => contact.type === "linkedin").url} github={profile.contacts.find((contact: { type: string; }) => contact.type === "github").url}/>
-      <Projects projects={projects as ProjectData[]}/>
       <Skills skills={profile.skills} />
+      <Projects projects={projects as ProjectData[]}/>
       <About aboutBody={profile.about} profileImage={profile.profile_img}/>
       <Contact contacts={profile.contacts}/>
     </main>
